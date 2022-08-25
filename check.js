@@ -12,35 +12,35 @@ Check.js javaScript Code....
 
 function joinCheck() {
 	if(document.frm.Customer_Name.value.length == 0 ) {
-		alert ("회원번호가 입력되지 않았습니다" ) ;
+		alert ("고객성명이 입력되지 않았습니다" ) ;
 		frm.Customer_Name.focus();
 		return false();
 	}
 
 	
 	if(document.frm.Customer_Address.value.length == 0 ) {
-		alert ("회원성명이 입력되지 않았습니다" ) ;
+		alert ("주소가 입력되지 않았습니다" ) ;
 		frm.Customer_Address.focus();
 		return false();
 	}
 	
 	
 	if(document.frm.Customer_Tel.value.length == 0 ) {
-		alert ("주소가 입력되지 않았습니다" ) ;
+		alert ("전화번호가 입력되지 않았습니다" ) ;
 		frm.Customer_Tel.focus();
 		return false();
 	}
 	
 	
 	if(document.frm.Customer_SEX.value.length == 0 ) {
-		alert ("전화번호가 입력되지 않았습니다" ) ;
+		alert ("성별이 입력되지 않았습니다" ) ;
 		frm.Customer_SEX.focus();
 		return false();
 	}
 	
 	
 	if(document.frm.Customer_Birth.value.length == 0 ) {
-		alert ("고객성별이 입력되지 않았습니다" ) ;
+		alert ("고객생년월일이 입력되지 않았습니다" ) ;
 		frm.Customer_Birth.focus();
 		return false();
 	}
