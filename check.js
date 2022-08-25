@@ -71,3 +71,13 @@ function modify() {
 	alert ("회원정보수정이 완료 되었습니다" ) ;
 	
 	}	
+
+function travel_modify() {
+	alert ("여행지정보수정이 완료 되었습니다" ) ;
+	
+	}
+
+function searchCheck02() {
+	window.location = "travel_list.jsp" ;
+	
+	}
