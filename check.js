@@ -12,14 +12,14 @@ Check.js javaScript Code....
 
 function joinCheck() {
 	if(document.frm.custname.value.length == 0 ) {
-		alert ("회원번호가 입력되지 않았습니다" ) ;
+		alert ("고객번호가 입력되지 않았습니다" ) ;
 		frm.custname.focus();
 		return false();
 	}
 
 	
 	if(document.frm.phone.value.length == 0 ) {
-		alert ("회원성명이 입력되지 않았습니다" ) ;
+		alert ("고객성명이 입력되지 않았습니다" ) ;
 		frm.phone.focus();
 		return false();
 	}
