@@ -11,46 +11,40 @@ Check.js javaScript Code....
  */
 
 function joinCheck() {
-	if(document.frm.custname.value.length == 0 ) {
-		alert ("고객번호가 입력되지 않았습니다" ) ;
-		frm.custname.focus();
+	if(document.frm.Customer_Name.value.length == 0 ) {
+		alert ("회원번호가 입력되지 않았습니다" ) ;
+		frm.Customer_Name.focus();
 		return false();
 	}
 
 	
-	if(document.frm.phone.value.length == 0 ) {
-		alert ("고객성명이 입력되지 않았습니다" ) ;
-		frm.phone.focus();
+	if(document.frm.Customer_Address.value.length == 0 ) {
+		alert ("회원성명이 입력되지 않았습니다" ) ;
+		frm.Customer_Address.focus();
 		return false();
 	}
 	
 	
-	if(document.frm.address.value.length == 0 ) {
+	if(document.frm.Customer_Tel.value.length == 0 ) {
 		alert ("주소가 입력되지 않았습니다" ) ;
-		frm.address.focus();
+		frm.Customer_Tel.focus();
 		return false();
 	}
 	
 	
-	if(document.frm.joindate.value.length == 0 ) {
+	if(document.frm.Customer_SEX.value.length == 0 ) {
 		alert ("전화번호가 입력되지 않았습니다" ) ;
-		frm.joindate.focus();
+		frm.Customer_SEX.focus();
 		return false();
 	}
 	
 	
-	if(document.frm.grade.value.length == 0 ) {
+	if(document.frm.Customer_Birth.value.length == 0 ) {
 		alert ("고객성별이 입력되지 않았습니다" ) ;
-		frm.grade.focus();
+		frm.Customer_Birth.focus();
 		return false();
 	}
 	
-	
-	if(document.frm.city.value.length == 0 ) {
-		alert ("고객생년월일이 입력되지 않았습니다" ) ;
-		frm.city.focus();
-		return false();
-	}
 	
 	success(); // 함수 작성 필요
 	return true ; //② 반환 값 참
