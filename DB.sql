@@ -15,7 +15,7 @@ Customer_Name      VARCHAR2(40),
 Customer_Address    VARCHAR2(40),
 Customer_Tel      VARCHAR2(40), 
 Customer_SEX      VARCHAR2(40),
-Customer_Birth  VARCHAR2(40)
+Customer_Birth  NUMBER
 );
 
 CREATE TABLE Travel(
