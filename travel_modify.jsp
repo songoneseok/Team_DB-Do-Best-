@@ -22,7 +22,7 @@
 	<h2 style = "text-align: center"><b>여행지 정보수정</b></h2><br>
 	
 	
-	<form method = "post" action = "action.jsp" name="frm" style = "display: flex; align-items: center; 
+	<form method = "post" action = "travel_action.jsp" name="frm" style = "display: flex; align-items: center; 
 	justify-content: center ; text-align: center">
 	
 	<input type = "hidden" name = "mode" value = "travel_modify">
@@ -34,7 +34,7 @@
 	
 	Connection conn = null;
 	Statement stmt = null ; 
-	String Travel_ID = "" ;
+	String mod_Travel_ID = request.getParameter("mod_Travel_ID") ;
 	String Travel_Location = "";
 	String Travel_Place = "";
 	String Travel_Food = "";
@@ -42,10 +42,10 @@
 	try {
 		conn = Util.getConnection(); 
 		stmt = conn.createStatement();
-		String sql = "select * from travel"; 
+		String sql = "select * from travel Where Travel_ID =" + mod_Travel_ID;
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next() ; 
-		Travel_ID = rs.getString("Travel_ID");
+		mod_Travel_ID = rs.getString("Travel_ID");
 		Travel_Location = rs.getString("Travel_Location");
 		Travel_Place = rs.getString("Travel_Place");
 		Travel_Food = rs.getString("Travel_Food");
@@ -62,7 +62,7 @@
 	
 	<tr>
 	<td>여행지ID</td>
-	<td><input type = "text" name= "Travel_ID" value= "<%=Travel_ID %>"></td>
+	<td><input type = "text" name= "mod_Travel_ID" value= "<%=mod_Travel_ID %>"></td>
 	</tr>
 	
 		<tr>
