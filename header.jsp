@@ -18,7 +18,7 @@ color:white;line-height:20px;font-size:10px;padding-left:20px">
 <a href = "list.jsp"> 예약목록조회</a> &nbsp;&nbsp;  
 <a href = "reservation.jsp"> 회원예약조회</a> &nbsp;&nbsp;&nbsp;&nbsp;
 <a href = "travel_list.jsp"> 여행지목록조회/수정</a> &nbsp;&nbsp;  
-<a href = "car_list.jsp"> 이동수단목록조회/수정</a> &nbsp;&nbsp;   
+<a href = "Tp_list.jsp"> 이동수단목록조회/수정</a> &nbsp;&nbsp;   
 <a href = "index.jsp"> 홈으로.</a>
 </nav>
 
