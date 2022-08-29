@@ -22,7 +22,7 @@
 	<h2 style = "text-align: center"><b>여행지 정보수정</b></h2><br>
 	
 	
-	<form method = "post" action = "action.jsp" name="frm" style = "display: flex; align-items: center; 
+	<form method = "post" action = "travel_action.jsp" name="frm" style = "display: flex; align-items: center; 
 	justify-content: center ; text-align: center">
 	
 	<input type = "hidden" name = "mode" value = "travel_modify">
@@ -42,7 +42,9 @@
 	try {
 		conn = Util.getConnection(); 
 		stmt = conn.createStatement();
-		String sql = "select * from travel"; 
+
+		String sql = "select * from travel";
+
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next() ; 
 		Travel_ID = rs.getString("Travel_ID");
