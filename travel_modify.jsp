@@ -34,25 +34,22 @@
 	
 	Connection conn = null;
 	Statement stmt = null ; 
-	String mod_Travel_ID = request.getParameter("mod_Travel_ID") ;
+	String Travel_ID = "" ;
 	String Travel_Location = "";
 	String Travel_Place = "";
 	String Travel_Food = "";
-
-
 	
 	try {
 		conn = Util.getConnection(); 
 		stmt = conn.createStatement();
-		String sql = "select * from Travel Where Travel_ID = " + mod_Travel_ID ; 
+		String sql = "select * from travel"; 
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next() ; 
-		mod_Travel_ID = rs.getString("Travel_ID");
+		Travel_ID = rs.getString("Travel_ID");
 		Travel_Location = rs.getString("Travel_Location");
 		Travel_Place = rs.getString("Travel_Place");
 		Travel_Food = rs.getString("Travel_Food");
 }
-
 //		SimpleDateFormat transFormat = new SimpleDateFormat("YYYY-MM-dd") ;
 //			joindateStr = transFormat.format(joindate); 
 //}
@@ -65,7 +62,7 @@
 	
 	<tr>
 	<td>여행지ID</td>
-	<td><input type = "text" name= "Travel_ID" value= "<%=mod_Travel_ID %>"></td>
+	<td><input type = "text" name= "Travel_ID" value= "<%=Travel_ID %>"></td>
 	</tr>
 	
 		<tr>
