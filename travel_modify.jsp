@@ -38,13 +38,13 @@
 	String Travel_Location = "";
 	String Travel_Place = "";
 	String Travel_Food = "";
-
-
 	
 	try {
 		conn = Util.getConnection(); 
 		stmt = conn.createStatement();
-		String sql = "select * from Travel " ; 
+
+		String sql = "select * from travel";
+
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next() ; 
 		Travel_ID = rs.getString("Travel_ID");
@@ -52,7 +52,6 @@
 		Travel_Place = rs.getString("Travel_Place");
 		Travel_Food = rs.getString("Travel_Food");
 }
-
 //		SimpleDateFormat transFormat = new SimpleDateFormat("YYYY-MM-dd") ;
 //			joindateStr = transFormat.format(joindate); 
 //}
