@@ -38,7 +38,7 @@
 	%>
 	
 	<tr>
-	<td><a href = "travel_modify.jsp?mod_Travel_ID=<%= rs.getString("Travel_ID") %>"><%= rs.getString("Travel_ID") %></a> </td>
+	<td><a href = "travel_modify.jsp?mod_TRAVEL_ID=<%= rs.getString("TRAVEL_ID") %>"><%= rs.getString("TRAVEL_ID") %></a> </td>
 	<td><%= rs.getString("TRAVEL_LOCATION") %> </td>
 	<td><%= rs.getString("TRAVEL_PLACE") %> </td>
 	<td><%= rs.getString("TRAVEL_FOOD") %> </td>	
