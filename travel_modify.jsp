@@ -34,7 +34,7 @@
 	
 	Connection conn = null;
 	Statement stmt = null ; 
-	String Travel_ID = "" ;
+	String mod_Travel_ID = request.getParameter("mod_Travel_ID") ;
 	String Travel_Location = "";
 	String Travel_Place = "";
 	String Travel_Food = "";
@@ -42,12 +42,16 @@
 	try {
 		conn = Util.getConnection(); 
 		stmt = conn.createStatement();
+<<<<<<< HEAD
 
 		String sql = "select * from travel";
 
+=======
+		String sql = "select * from travel Where Travel_ID =" + mod_Travel_ID;
+>>>>>>> 398302a76c63ffef77dd7baded3ea059a14146f7
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next() ; 
-		Travel_ID = rs.getString("Travel_ID");
+		mod_Travel_ID = rs.getString("Travel_ID");
 		Travel_Location = rs.getString("Travel_Location");
 		Travel_Place = rs.getString("Travel_Place");
 		Travel_Food = rs.getString("Travel_Food");
@@ -64,7 +68,7 @@
 	
 	<tr>
 	<td>여행지ID</td>
-	<td><input type = "text" name= "Travel_ID" value= "<%=Travel_ID %>"></td>
+	<td><input type = "text" name= "mod_Travel_ID" value= "<%=mod_Travel_ID %>"></td>
 	</tr>
 	
 		<tr>

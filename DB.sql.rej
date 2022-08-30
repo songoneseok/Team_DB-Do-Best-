@@ -1,0 +1,19 @@
+diff a/DB.sql b/DB.sql	(rejected hunks)
+@@ -1,13 +1,11 @@
+ -- ���̺� �ʱ�ȭ
+ -- ���̺� �ʱ�ȭ�� ���� �ܷ�Ű�� ¥�����־� ������� ���ؾ��� 
+-DROP TABLE Reservation; -- ���� ������ ���̺�(��� ���̺��� �ܷ�Ű�� ������) // �����Ǿ ����
+-
++DROP TABLE Reservation; -- ���� ������ ���̺�(��� ���̺��� �ܷ�Ű�� ������)
+ DROP TABLE Payment; -- ���� ���� �ٷ� �Ʒ��ܰ� ���̺�(�Ʒ� 3���� ���̺��� �ܷ�Ű�� ������)
+ 
+-DROP TABLE Tp;      -- ������̺��� �ܷ�Ű�� ������ �ִ� �̵����� ���̺�
+-DROP TABLE Travel;  -- ������̺��� �ܷ�Ű�� ������ �ִ� ������ ���̺�
+-
+-DROP TABLE Customer; -- ���� ������ ������̺�
++DROP TABLE Tp;
++DROP TABLE Travel;
++DROP TABLE Customer;
+ 
+ CREATE TABLE Customer(
+ Customer_ID    NUMBER  PRIMARY KEY, 

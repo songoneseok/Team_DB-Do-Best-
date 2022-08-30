@@ -13,6 +13,7 @@
 <body>
 
 <%
+<<<<<<< HEAD
 
 request.setCharacterEncoding("UTF-8");
 
@@ -26,6 +27,16 @@ String Travel_Place = request.getParameter ("Travel_Place");
 String Travel_Food = request.getParameter ("Travel_Food");
 
 
+=======
+request.setCharacterEncoding("UTF-8");
+Connection conn = null;
+Statement stmt = null;
+String mode = request.getParameter ("mode") ;
+String Travel_ID = request.getParameter ("mod_Travel_ID");
+String Travel_Location = request.getParameter ("Travel_Location");
+String Travel_Place = request.getParameter ("Travel_Place");
+String Travel_Food = request.getParameter ("Travel_Food");
+>>>>>>> 398302a76c63ffef77dd7baded3ea059a14146f7
 try {
 		conn = Util.getConnection();
 		stmt = conn.createStatement();
@@ -34,11 +45,18 @@ try {
 	case "insert" :
 		sql = "insert into Travel values(" + Travel_ID + " , " + " '" + Travel_Location + "' , " + " '" + Travel_Place + "' , " + " '" + Travel_Food + "' ) ";
 		stmt.executeUpdate ( sql );
+<<<<<<< HEAD
 
 %>
 
 		<jsp:forward page ="traver_list.jsp"></jsp:forward>
 		
+=======
+%>
+
+		<jsp:forward page ="traver_list.jsp"></jsp:forward>
+
+>>>>>>> 398302a76c63ffef77dd7baded3ea059a14146f7
 <%
 		
 		break ;
@@ -52,11 +70,15 @@ try {
 		<jsp:forward page ="travel_modify.jsp"></jsp:forward>
 
 <%
+<<<<<<< HEAD
 
+=======
+>>>>>>> 398302a76c63ffef77dd7baded3ea059a14146f7
 		break ;
 	
 	}
 }
+<<<<<<< HEAD
 
 
 catch ( Exception e) {
@@ -67,3 +89,12 @@ catch ( Exception e) {
 
 </body>
 </html>
+=======
+catch ( Exception e) {
+	e.printStackTrace();
+}
+%>
+
+</body>
+</html> 
+>>>>>>> 398302a76c63ffef77dd7baded3ea059a14146f7
