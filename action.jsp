@@ -1,4 +1,3 @@
-
 <%@ page import= "java.text.*" %>
 <%@ page import= "java.sql.*" %> 
 <%@ page import= "java.util.*" %>
@@ -20,7 +19,6 @@
 	Statement stmt = null ;
 	
 	String tblName="";
-	String sqlValues="";
 	String keyPm="";
 	int index=0;
 	
@@ -43,20 +41,17 @@
 		pmType.add(0);
 		
 		try {
-			Integer.parseInt(temp);
+			Integer intTemp=Integer.parseInt(temp);
+			if(!temp.equals(intTemp.toString()))
+				throw new Exception();
 		} catch (Exception e) {
 			pmType.remove(index);
 			pmType.add(1);
-			sqlValues+="'";
 		}
-		sqlValues+=temp;
-		if(pmType.get(index)==1)
-			sqlValues+="'";
-		if(em.hasMoreElements()) {
-				sqlValues += ",";	
-		} else
-			break;
 		
+		if(!em.hasMoreElements())
+			break;
+			
 		index++;
 	}
 	
@@ -68,14 +63,24 @@
 		switch ( mode ) {
 		
 		case "insert" : 
-			sql = "insert into "+ tblName +" values( "+ sqlValues +" ) " ;
+			sql = "insert into "+ tblName +" values(";
+			for(int i=0;i<pmName.size();i++) {
+				if(i>0)
+					sql+=",";
+				if(pmType.get(i)==1)
+					sql+="'"+request.getParameter(pmName.get(i))+"'";
+				else
+					sql+=request.getParameter(pmName.get(i));
+			}
+			sql+=")";
+			
 			stmt.executeUpdate ( sql );
 			
 			%>
 			<jsp:forward page="join.jsp"></jsp:forward>
 			<%
 			
-			break ; 
+			break; 
 			
 		case "modify" :
 			
@@ -94,7 +99,7 @@
 			%>
 			<jsp:forward page="modify.jsp"></jsp:forward>
 			<%
-			break ; 
+			break; 
 		}
 		
 	}
